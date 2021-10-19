@@ -75,7 +75,9 @@ public class AdManager : MonoBehaviour
         m_RewardedAd.OnClosed += AdClosed;
         m_RewardedAd.OnShowed += AdShown;
         m_RewardedAd.OnFailedShow += AdFailedToShow;
+        m_RewardedAd.OnClicked += AdClicked;
     }
+
 
     private void Initialization_Failed(Exception error)
     {

@@ -78,9 +78,15 @@ namespace Unity.Services.Mediation.Samples
             m_RewardedAd.OnClosed += AdClosed;
             m_RewardedAd.OnShowed += AdShown;
             m_RewardedAd.OnFailedShow += AdFailedShow;
+            m_RewardedAd.OnClicked += RewardedAd_OnClicked;
 
             Debug.Log($"Initialized On Start. Loading Ad...");
             LoadAd();
+        }
+
+        private void RewardedAd_OnClicked(object sender, EventArgs e)
+        {
+            Debug.Log("on clicked");
         }
 
         void InitializationFailed(Exception error)
